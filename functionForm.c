@@ -11,19 +11,19 @@
 #include <time.h>
 #define MAXCHAR 1000
 
-
 void callEmail(){
     char buff[20];
     struct tm *sTm;
     time_t now = time (0);
     sTm = localtime (&now);
-   // strftime (buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", sTm);
-    //cout << buff << endl;
+    strftime (buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", sTm);
+    //printf(buff);
 
     // Call the Python script passing a filename argument.
-    char* command = "mailsend -f garagesensor150@gmail.com -smtp smtp.gmail.com -t belislematt@gmail.com -sub \"testing oneline messages\" -cs \"us-ascii\" -enc-type \"7bit\" -M \"This is a test\" -starttls -user garagesensor150@gmail.com -port 587 -auth";
-	system(command);
+    char* command = "mailsend -f garagesensor150@gmail.com -smtp smtp.gmail.com -t abdum.shk@gmail.com -sub \"Your car has entered the garage\" -cs \"us-ascii\" -enc-type \"7bit\" -M " + \"Car entered the garage at\" + buff +  \"This is a test\" -starttls -user garagesensor150@gmail.com -port 587 -auth";
+	  system(command);
 }
+
 bool checkDistance(float theDistance){
 
 	gpio_request(3,NULL);
