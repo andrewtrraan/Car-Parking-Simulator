@@ -8,9 +8,9 @@
  <ul>
   <li>Cross compiling C/C++ files in order to run on the Onion Linux Embedded Environment</li>
   <li>Various C libraries including ugpio and fstream</li>
-  <li>Read in distance sensor data and stored them into struct data structures to perform statistics<li>
-  <li>File logged events that occured and errors<li>
-<ul>
+  <li>Read in distance sensor data and stored them into struct data structures to perform statistics</li>
+  <li>File logged events that occured and errors</li>
+</ul>
   
  
   
@@ -18,5 +18,4 @@
 <ul>
   <li>Onion Linux Embedded Envrinment microcontroller</li>
   <li>Arduino and Arduino Ultrasonic sensors</li>
-  
 </ul>
